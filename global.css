@@ -7,15 +7,79 @@ body {
     box-sizing: border-box;
     margin: auto;
     padding: 1em;
-  }
+}
 
 header {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+h1 {
+    margin-right: auto;
+}
+
+#time-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+#time-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
     gap: 1rem;
 }
 
-em {
-    color: gray;
-    font-style: italic;
+#time-slider {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+#time-label {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 24px;
+    width: 100%;
+}
+
+#circle-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: fit-content;
+    margin: 12px auto;
+}
+
+.legend-label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: bold;
+}
+
+/* color swatches for legend */
+.legend-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
 }

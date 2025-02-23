@@ -14,19 +14,41 @@
 </head>
 <body>
     <header>
-        <h1>🚴🏼‍♀️ Bikewatching</h1>
-        <label for="time-slider">Filter by time:</label>
-        <input type="range" id="time-slider" min="-1" max="1440" value="-1">
-        <time id="selected-time"></time>
-        <em id="any-time-label">(any time)</em>
+        <h1>🚴🏼‍♀️💨💨💨 Bikewatching</h1>
+        <div id="time-controls">
+            <div id="time-slider-container">
+                <label for="time-slider">Filter by time:</label>
+                <input type="range" id="time-slider" min="-1" max="1440" value="-1">
+            </div>
+            <div id="time-label">
+                <em id="any-time-label">(any time)</em>
+                <time id="selected-time" style="display: none;"></time>
+            </div>
+        </div>
     </header>
-    <div id="legend">
-        <div><span style="background-color: #ead0f1"></span> Education Areas</div>
-        <div><span style="background-color: #a3e1c1"></span> Green Areas</div>
-        <div><span style="background-color: #FFA726"></span> Commercial Areas</div>
-    </div>
+      
     <div id="map">
         <svg></svg>
+        <div id="legend">
+            <div><span style="background-color: #ead0f1"></span> Education Areas</div>
+            <div><span style="background-color: #a3e1c1"></span> Green Areas</div>
+            <div><span style="background-color: #FFA726"></span> Commercial Areas</div>
+        </div>
+    </div>
+    <div id="circle-legend">
+        <span class="legend-label">LEGEND:</span>
+        <div class="legend-item">
+            <span class="legend-swatch" style="background-color: steelblue;"></span>
+            More departures
+        </div>
+        <div class="legend-item">
+            <span class="legend-swatch" style="background-color: purple;"></span>
+            Balanced
+        </div>
+        <div class="legend-item">
+            <span class="legend-swatch" style="background-color: darkorange;"></span>
+            More arrivals
+        </div>
     </div>
 
     <!-- Mapbox GL JS JavaScript -->
